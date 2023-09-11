@@ -8,10 +8,10 @@ on:
   workflow_dispatch:
 
 jobs:
-    connect-machine:
+    open-git-container:
       runs-on: ubuntu-latest
       steps:
         - name: echo message 
-          run: echo "welcome"
-         
+          run: pwd
+          
   
