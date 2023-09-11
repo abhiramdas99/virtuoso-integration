@@ -14,8 +14,10 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v2
           
-        - name: execute  Virtuoso Shell script file  
+        - name: initialize linux environment on
           run: |
             VIRTUOSO_TOKEN=${{vars.VIRTUOSO_TOKEN}}
-            echo "$VIRTUOSO_TOKEN"
+            
+        - name: execute  Virtuoso Shell script file  
+          run: echo "$VIRTUOSO_TOKEN"
           
