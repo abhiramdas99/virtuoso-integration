@@ -6,7 +6,7 @@ set -eou pipefail
 # Contact: support@spotqa.com
 # Title: Example script for triggering Virtuoso APIs to execute journeys in a goal
 # Requirements: This script requires curl and jq to be installed.
-# Last modified: 23/02/2023
+# Last modified: 23/02/2023 f
 #-----------------------------#
 
 
