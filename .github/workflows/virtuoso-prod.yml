@@ -1,1 +1,18 @@
+name: VIRTUOS INTEGRATION 
 
+on: 
+  push: 
+    branches: [main]
+  pull_request:
+        branches: [main]
+  workflow_dispatch:
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/development'
+      steps:
+        - name: echo message 
+        - run: echo "welcome"
+         
+  
