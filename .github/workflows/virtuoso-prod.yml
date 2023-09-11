@@ -11,7 +11,7 @@ jobs:
     open-git-container:
       runs-on: ubuntu-latest
       steps:
-        - name: echo message 
+        - name: Checkout Repo to $GITHUB_WORKSPACE
           run: ls -la
           
   
