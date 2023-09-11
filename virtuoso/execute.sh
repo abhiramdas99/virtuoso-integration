@@ -11,7 +11,7 @@ set -eou pipefail
 
 
 if [ $# -eq 0 ]; then
-    echo "Usage: ./execute.sh -t a811f634-cd39-4657-b498-46644d58488e --goal_id 6397 [--staging] [--app2] [--max_retry_time MAX_RETRY_TIME] [--retry_delay_time RETRY_DELAY_TIME]"
+    echo "Usage: execute.sh -t a811f634-cd39-4657-b498-46644d58488e --goal_id 6397 [--staging] [--app2] [--max_retry_time MAX_RETRY_TIME] [--retry_delay_time RETRY_DELAY_TIME]"
     exit 1
 fi
 
