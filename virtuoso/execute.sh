@@ -11,7 +11,7 @@ set -eou pipefail
 
 
 if [ $# -eq 0 ]; then
-    echo "Usage: execute.sh -t a811f634-cd39-4657-b498-46644d58488e --goal_id 6397 "
+    echo "Usage: ./execute.sh -t a811f634-cd39-4657-b498-46644d58488e --goal_id 6397 "
     exit 1
 fi
 
