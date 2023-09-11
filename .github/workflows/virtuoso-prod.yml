@@ -12,6 +12,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: echo message 
-          run: pwd
+          run: ls -la
           
   
