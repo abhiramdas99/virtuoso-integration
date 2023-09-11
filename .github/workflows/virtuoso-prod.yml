@@ -17,5 +17,5 @@ jobs:
         - name: execute  Virtuoso Shell script file  
           run: |
             VIRTUOSO_TOKEN=${{vars.VIRTUOSO_TOKEN}}
-            echo "welcome $VIRTUOSO_TOKEN"
+            echo "$VIRTUOSO_TOKEN"
           
