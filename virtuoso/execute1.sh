@@ -1,1 +1,1 @@
-echo "welcome"
+echo "Usage: ./execute.sh"
