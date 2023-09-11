@@ -15,5 +15,8 @@ jobs:
           uses: actions/checkout@v2
           
         - name: execute  Virtuoso Shell script file  
-          run: bash virtuoso/execute.sh
+          run: VIRTUOSO_TOKEN=${{VIRTUOSO_TOKEN}}
+          
+        - name: execute  Virtuoso Shell script file  
+          run: echo $VIRTUOSO_TOKEN
           
