@@ -8,12 +8,10 @@ on:
   workflow_dispatch:
 
 jobs:
-    build:
+    connect-machine:
       runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/development'
       steps:
         - name: echo message 
-          uses: actions/checkout@v2
-        - run: echo 'welcome'
+          run: echo "welcome"
          
   
