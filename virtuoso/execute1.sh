@@ -1,1 +1,1 @@
-echo "Usage: ./execute1.sh"
+echo " i am from the script - #VIRTUOSO_TOKEN"
