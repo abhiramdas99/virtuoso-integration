@@ -16,6 +16,6 @@ jobs:
           
         - name: initialize linux environment on
           run: |
-            bash virtuoso/execute.sh -t "${{vars.VIRTUOSO_TOKEN}}" --goal_id "${{vars.GOAL_ID}}"            
+            bash virtuoso/execute.sh -t ${{vars.VIRTUOSO_TOKEN}} --goal_id ${{vars.GOAL_ID}}            
 
           
