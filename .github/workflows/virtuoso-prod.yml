@@ -17,7 +17,7 @@ jobs:
         - name: initialize linux environment on
           run: |
             export VIRTUOSO_TOKEN=${{vars.VIRTUOSO_TOKEN}}
-            bash virtuoso/execute1.sh 
+            bash virtuoso/execute.sh 
             echo "$VIRTUOSO_TOKEN"
             
         - name: execute  Virtuoso Shell script file  
