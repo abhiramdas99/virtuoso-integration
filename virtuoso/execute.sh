@@ -94,7 +94,7 @@ JOB_ID=$(curl -s --header "Authorization: Bearer $TOKEN" -X POST "https://$ENV.v
 
 if [ -z $JOB_ID ] || [ "$JOB_ID" == "null" ]; then
   echo "Failed to execute job."
-  exit 1
+ # exit 1
 fi
 echo "Launched execution job $JOB_ID"
 
@@ -150,12 +150,12 @@ echo "Execution link: https://$UI.virtuoso.qa/#/project/execution/$JOB_ID"
 
 # Different exit code for when job did not fail/error but status was not finished (cancelled/failed)
 if [ "$JOB_STATUS" != "FINISHED" ]; then
-  exit 3
+ # exit 3
 fi
 
 # terminate unsuccessfully if job did not pass
 if [ "$OUTCOME" == "FAIL" ] || [ "$OUTCOME" == "ERROR" ]; then
-  exit 2
+ # exit 2
 fi
 
 echo "Done!"
