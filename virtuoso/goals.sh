@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eou pipefail
 
 # Initialize the string
 strGoals="112,3335,445,56556565"
