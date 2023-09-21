@@ -15,5 +15,5 @@ for ((n=0;n<${#strarr[*]};n++))
 do 
   #echo "$1"
   #echo "${strarr[n]}"
-  bash execute.sh -t "$1" --goal_id "${strarr[n]}" 
+  bash virtuoso/execute.sh -t "$1" --goal_id "${strarr[n]}" 
 done
