@@ -2,7 +2,7 @@
 set -eou pipefail
 
 # Initialize the string
-strGoals="113748,113747"
+strGoals="133301,113748,113747"
 
 #Set comma as delimeter
 IFS=','
