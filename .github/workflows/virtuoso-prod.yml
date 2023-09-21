@@ -1,4 +1,4 @@
-name: VIRTUOS INTEGRATION 
+name: VIRTUOS INTEGRATION 1
 
 on: 
   push: 
@@ -14,7 +14,7 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v2
           
-        - name: execue virtuoso shell script
+        - name: execue virtuoso shell script 1
           run: |
             bash virtuoso/execute.sh -t ${{vars.VIRTUOSO_TOKEN}} --goal_id ${{vars.GOAL_ID}}            
 
