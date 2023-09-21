@@ -15,14 +15,5 @@ jobs:
           run: |
             echo "welcome"
             
-    ExecuteShellScript:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Checkout Repo to Git Runner
-      - uses: actions/checkout@v2        
-     
-      - name: execue virtuoso shell script 1
-        run: |
-            bash virtuoso/goals.sh ${{vars.VIRTUOSO_TOKEN}}           
 
           
