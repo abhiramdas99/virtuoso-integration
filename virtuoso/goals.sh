@@ -2,7 +2,7 @@
 set -eou pipefail
 
 # Initialize the string
-strGoals="112,3335,445,56556565"
+strGoals="113748,113747"
 
 #Set comma as delimeter
 IFS=','
@@ -13,7 +13,7 @@ read -a strarr<<< "$strGoals"
 #Print each value of the array by using loop
 for ((n=0;n<${#strarr[*]};n++))
 do 
-  echo "$1"
+  #echo "$1"
   #echo "${strarr[n]}"
-  #bash execute.sh -t "$2" --goal_id "${strarr[n]}" 
+  bash execute.sh -t "$1" --goal_id "${strarr[n]}" 
 done
