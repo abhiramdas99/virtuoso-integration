@@ -16,6 +16,6 @@ jobs:
           
         - name: execue virtuoso shell script 1
           run: |
-             virtuoso/goals.sh ${{vars.VIRTUOSO_TOKEN}}           
+             bash virtuoso/goals.sh ${{vars.VIRTUOSO_TOKEN}}           
 
           
