@@ -13,7 +13,7 @@ read -a strarr<<< "$strGoals"
 #Print each value of the array by using loop
 for ((n=0;n<${#strarr[*]};n++))
 do 
-  echo "$2"
+  echo "$1"
   #echo "${strarr[n]}"
   #bash execute.sh -t "$2" --goal_id "${strarr[n]}" 
 done
