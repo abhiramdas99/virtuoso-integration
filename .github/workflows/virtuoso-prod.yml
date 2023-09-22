@@ -8,17 +8,31 @@ on:
   workflow_dispatch:
 
 jobs:
-    Initialized:
+    TestByVrtuoso:
       runs-on: ubuntu-latest
+      env:
+        SLACK_WEBHOOK_URL: ${{vars.SLACK_WEBHOOK_URL}}
+
+      permissions:
+        id-token: write # This is required for requesting the JWT
+        contents: read # This is required for actions/checkout
+        
+        #  code for if condition 
+        # if: github.ref == 'refs/heads/main' 
+        
       steps:
-        - name: Echo Message 
+        - name: Initialize Notification By Slack
+          if: always()
           run: |
-            echo "welcome"
+            # Prepare the payload for Slack message
+            GITHUB_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+            SLACK_MESSAGE="*(Virtuoso Msg)* ID: *$GITHUB_RUN_NUMBER* \nDeployment to staging branch was *$GITHUB_EVENT_NAME*.\nDeployment Status: *started*\nCommitted by: *$(git log -1 --pretty=%an)*\nCommit Message: *$GITHUB_COMMIT_MESSAGE*"
+            SLACK_PAYLOAD="{\"text\": \"$SLACK_MESSAGE\"}"
+
+            # Send the notification to Slack
+            curl -X POST -H 'Content-type: application/json' --data "$SLACK_PAYLOAD" $SLACK_WEBHOOK_URL
             
-    ExecuteShellScrpt:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Gheckout to Git Runner
+        - name: Repo Checkout to GitRunner
           uses: actions/checkout@v2 
 
 
