@@ -30,7 +30,7 @@ jobs:
             # Prepare the payload for Slack message
             GITHUB_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
             #SLACK_MESSAGE="*(Virtuoso Msg)* ID: *$GITHUB_RUN_NUMBER* \nDeployment to staging branch was *$GITHUB_EVENT_NAME*.\nDeployment Status: *started*\nCommitted by: *$(git log -1 --pretty=%an)*\nCommit Message: *$GITHUB_COMMIT_MESSAGE*"
-             SLACK_MESSAGE="*Workspace: $GITHUB_WORKSPACE | Action ID: $GITHUB_RUN_NUMBER"
+             SLACK_MESSAGE="Git Action Detail: *$GITHUB_REPOSITORY/$GITHUB_REF_TYPE/GITHUB_RUN_NUMBER*" 
             SLACK_PAYLOAD="{\"text\": \"$SLACK_MESSAGE\"}"
 
             # Send the notification to Slack
