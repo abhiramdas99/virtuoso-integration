@@ -8,11 +8,18 @@ on:
   workflow_dispatch:
 
 jobs:
+    Initialized:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Echo Message 
+          run: |
+            echo "welcome"
+            
     ExecuteShellScrpt:
       runs-on: ubuntu-latest
       steps:
         - name: Gheckout to Git Runner
-        - uses: actions/checkout@v2 
+          uses: actions/checkout@v2 
 
 
           
